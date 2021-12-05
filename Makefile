@@ -6,6 +6,7 @@ THIS_SRCADD += $(shell find $(THIS_SRCDIR) -name [^.]*.c)
 SRCDIR += $(THIS_SRCDIR)
 SRC += $(THIS_SRCADD)
 
-INCDIR := $(addprefix $(RELPATH), inc)
+INCDIR := $(RELPATH)
+INCDIR += $(addprefix $(RELPATH), inc)
 
 INCFLAGS += $(addprefix -I, $(INCDIR))
